@@ -1,4 +1,4 @@
-name: workflow trigger with user input
+name: workflow trigger with multiple inputs
 
 on:
   workflow_dispatch:
