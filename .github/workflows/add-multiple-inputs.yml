@@ -1,0 +1,32 @@
+name: workflow trigger with user input
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'In which Environment we want to deploy our code'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - production
+          - qa
+          - dev 
+          - uat 
+
+      manual_approval:
+        description: 'Do we need Approval for this Job ?'
+        required: true
+        type: boolean
+        default: false
+
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Deploying to ${{ github.event.inputs.environment }} Environment'
+
+
+
