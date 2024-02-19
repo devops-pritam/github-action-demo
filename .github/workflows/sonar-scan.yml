@@ -17,5 +17,5 @@ jobs:
         with:
           args: >
               -Dsonar.organization=devops-pritam
-              -Dsonar.projectKey=test-gh
+              -Dsonar.projectKey=devops-pritam
               -Dsonar.python.coverage.reportPaths=coverage.xml
